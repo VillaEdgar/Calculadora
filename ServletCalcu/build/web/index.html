@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function solonumeros(eve) {
+                var numeritos = eve.which || eve.keyCode;
+                if (numeritos >= 48 && numeritos <= 57) {
+                    return true;
+                }
+                else
+                    return false;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <form method="POST" action="calcu">
+                <input type="text" name="num1" onkeypress="return solonumeros(event)">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="num2" onkeypress="return solonumeros(event)">
+                <br><br><br><br>
+                <input type="submit" name="boton" value="suma">
+                &nbsp;&nbsp;
+                <input type="submit" name="boton" value="resta">
+                &nbsp;&nbsp;
+                <input type="submit" name="boton" value="divicion">
+                &nbsp;&nbsp;
+                <input type="submit" name="boton" value="multiplicacion">
+            </form>
+        </div>
+    </body>
+</html>
